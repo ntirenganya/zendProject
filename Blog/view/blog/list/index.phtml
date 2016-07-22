@@ -1,0 +1,18 @@
+<h1> Berbo *uckin zend2</h1>
+
+ <h1>By printing the whole object</h1> 
+ 
+  <article>
+ <?php var_dump($this->postso)?>
+  </article>
+  
+  
+  <h1>Printing some selected elements such as title, id, text, etc.</h1> 
+ <?php foreach ($this->postso as $post): ?>
+ <article>
+     <h1 id="post<?php echo $post->getId() ?>"><?= $post->getTitle() ?></h1>
+     <p>
+         <?= $post->getText() ?>
+     </p>
+ </article>
+ <?php endforeach ?>
